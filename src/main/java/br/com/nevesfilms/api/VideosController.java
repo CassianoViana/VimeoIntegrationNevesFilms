@@ -1,5 +1,6 @@
 package br.com.nevesfilms.api;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +13,7 @@ import java.net.URL;
 @RestController
 public class VideosController {
 
+    @CrossOrigin(origins = "*")
     @GetMapping(path = "/getVideos", produces = "application/json")
     public String getVideosList() throws Exception {
 
